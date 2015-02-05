@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>particles/Explosion.qml</file>
+        <file>MainForm.qml</file>
+        <file>particles/ShockWave.qml</file>
+        <file>particles/images/glowdot.png</file>
+        <file>particles/Smoke.qml</file>
+        <file>particles/SmokeRings.qml</file>
+        <file>particles/images/explosion_texture.png</file>
+    </qresource>
+</RCC>
