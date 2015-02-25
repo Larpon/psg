@@ -110,6 +110,12 @@ Item {
                             colorCode: "green"
                             file: "particles/SmokeRings.qml"
                         }
+
+                        ListElement {
+                            name: "Camp Fire"
+                            colorCode: "yellow"
+                            file: "particles/CampFire.qml"
+                        }
                     }
                 }
 
@@ -141,7 +147,8 @@ Item {
                         id: captureItem
                         anchors.fill: parent
 
-                        color: "transparent"
+                        // QTBUG-44288
+                        color: "black"
 
                         Loader {
                             anchors.fill: parent

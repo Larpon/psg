@@ -8,5 +8,7 @@
         <file>particles/Smoke.qml</file>
         <file>particles/SmokeRings.qml</file>
         <file>particles/images/explosion_texture.png</file>
+        <file>particles/CampFire.qml</file>
+        <file>particles/images/smoke_particle.png</file>
     </qresource>
 </RCC>
