@@ -10,5 +10,6 @@
         <file>particles/images/explosion_texture.png</file>
         <file>particles/CampFire.qml</file>
         <file>particles/images/smoke_particle.png</file>
+        <file>particles/Boof.qml</file>
     </qresource>
 </RCC>

@@ -62,7 +62,7 @@ ApplicationWindow {
             if(grab) {
                 mainForm.captureItem.grabToImage(function(result) {
                     console.log('Grabing frame',frame)
-                    result.saveToFile("/home/lmp/Desktop/QtGrabTest/grab_"+frame+".png");
+                    result.saveToFile("/tmp/grab_"+frame+".png");
                     frame++
                 });
             }

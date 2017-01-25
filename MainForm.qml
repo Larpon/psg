@@ -94,6 +94,12 @@ Item {
                         }
 
                         ListElement {
+                            name: "Boof"
+                            colorCode: "lightgrey"
+                            file: "particles/Boof.qml"
+                        }
+
+                        ListElement {
                             name: "Shock wave"
                             colorCode: "red"
                             file: "particles/ShockWave.qml"
