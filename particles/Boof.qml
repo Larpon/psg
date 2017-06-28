@@ -45,10 +45,16 @@ Item {
     Emitter {
 		id: boofEmitter
         objectName: "boofEmitter"
+
+        /*
         x: 195
         y: 197
         width: 100
         height: 100
+        */
+
+        anchors { fill: parent }
+
         enabled: false
         group: ""
         emitRate: 750

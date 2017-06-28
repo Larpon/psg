@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>particles/Explosion.qml</file>
-        <file>MainForm.qml</file>
         <file>particles/ShockWave.qml</file>
         <file>particles/images/glowdot.png</file>
         <file>particles/Smoke.qml</file>
@@ -11,5 +10,11 @@
         <file>particles/CampFire.qml</file>
         <file>particles/images/smoke_particle.png</file>
         <file>particles/Boof.qml</file>
+        <file>particles/SmokeSideView.qml</file>
+        <file>qml/ui/MainForm.qml</file>
+        <file>qml/qmldir</file>
+        <file>qml/App.qml</file>
+        <file>qml/Util.qml</file>
+        <file>particles/Fire.qml</file>
     </qresource>
 </RCC>
