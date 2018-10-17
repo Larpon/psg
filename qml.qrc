@@ -16,5 +16,8 @@
         <file>qml/App.qml</file>
         <file>qml/Util.qml</file>
         <file>particles/Fire.qml</file>
+        <file>particles/SmokeTrail.qml</file>
+        <file>particles/Portal.qml</file>
+        <file>particles/ThickSmoke.qml</file>
     </qresource>
 </RCC>

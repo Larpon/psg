@@ -2,11 +2,11 @@ import QtQuick 2.4
 import QtQuick.Particles 2.0
 
 Item {
-    anchors.fill: parent
+    //anchors.fill: parent
 
     ParticleSystem {
         id: particles
-        anchors.fill: parent
+        //anchors.fill: parent
 
     }
 

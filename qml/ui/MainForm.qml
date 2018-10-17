@@ -36,16 +36,17 @@ Item {
             Item {
                 id: leftPaneItem
 
-                Layout.minimumWidth: 200
-
-
+                Layout.minimumWidth: columnLayout1.implicitWidth
+                Layout.margins: 8
                 //anchors.margins: 8
 
                 ColumnLayout {
                     id: columnLayout1
+
                     anchors.fill: parent
 
-                    Row {
+                    RowLayout {
+
                         Button {
                             id: captureButton
                             text: qsTr("Capture")
@@ -156,9 +157,21 @@ Item {
                             }
 
                             ListElement {
+                                name: "Smoke (thick)"
+                                colorCode: "black"
+                                file: "ThickSmoke.qml"
+                            }
+
+                            ListElement {
                                 name: "Smoke rings"
                                 colorCode: "green"
                                 file: "SmokeRings.qml"
+                            }
+
+                            ListElement {
+                                name: "Smoke trail"
+                                colorCode: "grey"
+                                file: "SmokeTrail.qml"
                             }
 
                             ListElement {
@@ -172,6 +185,13 @@ Item {
                                 colorCode: "orange"
                                 file: "Fire.qml"
                             }
+
+                            ListElement {
+                                name: "Portal"
+                                colorCode: "white"
+                                file: "Portal.qml"
+                            }
+
                         }
                     }
 
@@ -185,43 +205,56 @@ Item {
                 Layout.minimumWidth: 50
                 Layout.fillWidth: true
 
-                Rectangle {
-                    id: captureItemBackground
-
-                    color: "#5e913e"
-                    border.color: Qt.darker(Qt.darker(color))
-                    anchors.margins: 10
+                ColumnLayout {
                     anchors.fill: parent
 
-                    Item {
-                        id: captureItem
-                        anchors.fill: parent
+                    Label {
+                        text: qsTr("Frame size %1x%2").arg(particleLoader.width).arg(particleLoader.height)
+                        Layout.topMargin: 8
+                        Layout.leftMargin: 8
+                        Layout.rightMargin: 8
+                    }
 
-                        // QTBUG-44288 - if using Rectangle instead of Item
-                        //color: captureItemBackground.color //"transparent"
-                        //color: "transparent"
+                    Rectangle {
+                        id: captureItemBackground
 
-                        Rectangle {
-                            //id: particleLoaderTrick
+                        color: "#5e913e"
+                        border.color: Qt.darker(Qt.darker(color))
+
+                        Layout.margins: 8
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+
+                        Item {
+                            id: captureItem
                             anchors.fill: parent
-                            color: captureItemBackground.color
-                            //opacity: 0.01
-                            //border.color: captureItemBackground.color
-                            //border.width: 200
-                        }
 
-                        Loader {
-                            id: particleLoader
-                            anchors.fill: parent
-                            scale: particleLoaderScale.value
-                            transformOrigin: Item.Center
-                        }
+                            // QTBUG-44288 - if using Rectangle instead of Item
+                            //color: captureItemBackground.color //"transparent"
+                            //color: "transparent"
 
+                            Rectangle {
+                                //id: particleLoaderTrick
+                                anchors.fill: parent
+                                color: captureItemBackground.color
+                                //opacity: 0.01
+                                //border.color: captureItemBackground.color
+                                //border.width: 200
+                            }
+
+                            Loader {
+                                id: particleLoader
+                                anchors.fill: parent
+                                scale: particleLoaderScale.value
+                                transformOrigin: Item.Center
+                            }
+
+
+                        }
 
                     }
 
                 }
-
             }
 
             Item {

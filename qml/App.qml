@@ -30,9 +30,7 @@ QtObject {
         property color yellow: "#e2c60f"
     }
 
-    Component.onCompleted: {
-
-    }
+    //Component.onCompleted: { }
 
     function connectOnce(target,func) {
         if(!('connect' in target) ||!('disconnect' in target) ) {
